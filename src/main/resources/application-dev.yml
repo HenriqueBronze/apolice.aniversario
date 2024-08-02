@@ -1,0 +1,11 @@
+spring:
+    banner:
+        location: classpath:/banner.txt
+    datasource:
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        url: jdbc:sqlserver://10.55.243.58:1433;databaseName=SISED000;encrypt=false;trustServerCertificate=false;characterSet=UTF-8
+        username: SISEJAVA
+        password: java
+# Utilizar porta 8443 para realizar o deploy na esteira DevSecOps HTTPS
+server:
+    port: 8443

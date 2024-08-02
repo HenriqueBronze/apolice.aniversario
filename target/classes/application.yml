@@ -1,0 +1,59 @@
+springdoc:
+  packagesToScan: com.br.vida.api.srv.apolice.atraso
+spring:
+    banner:
+        location: classpath:/banner.txt
+    profiles:
+        active: ${PROFILE:dev}
+    application:
+        name: "vida-api-srv-apolice-atraso"
+        version: "0.0.1-SNAPSHOT"
+        description: "Demo project for Spring Boot"
+        groupId: "com.br.vida.api.srv.apolice.atraso"
+        artifactId: "vida-api-srv-apolice-atraso"
+        java: "11.0.23"
+    ci:
+        ambiente: ${AMBIENTE:esteira}
+        secrets: ${SECRETS:ci}
+    jpa:
+      hibernate:
+        ddl-auto: none
+        #ddl-auto: create drop
+        show-sql: true
+      properties:
+        hibernate:
+          physical_naming_strategy: com.br.vida.api.srv.apolice.atraso.commom.utils.NoChangeNamingStrategy
+          dialect: org.hibernate.dialect.SQLServerDialect
+          proc.param_null_passing: true
+      show-sql: true
+    mvc:
+      pathmatch:
+        matching-strategy: ant-path-matcher
+# Utilizar porta 8443 para realizar o deploy 
+server:
+    port: 8443
+    servlet:
+        context-path: "/vida-api-srv-apolice-atraso"
+        encoding:
+            charset: "UTF-8"
+
+    ssl:
+        certificate: ${CERT_SSL_PATH:cer_appstu.pem}
+        certificate-private-key: ${KEY_SSL_PATH:key_appstu.pem}
+    datasource:
+        url: jdbc:h2:mem:testdb
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+    
+logging:
+    file:
+        name: "/var/log/vida-api-srv-apolice-atraso/vida-api-srv-apolice-atraso.log"
+    level:
+        root: INFO
+    pattern:
+        console: "${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} - [${HOSTNAME}]){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"
+        file: "${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} - [${HOSTNAME}] ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"
+    logback:
+        rollingpolicy:
+            max-file-size: 10MB            
