@@ -12,7 +12,7 @@ import java.util.List;
 
 @Configuration
 @EnableCaching
-@ComponentScan("com.br.vida.api.srv.apolice.atraso")
+@ComponentScan("com.br.vida.api.srv.apolice.aniversario")
 public class CacheConfig {
     @Bean
     public CacheManager cacheManager() {

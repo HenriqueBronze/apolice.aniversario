@@ -1,5 +1,5 @@
 springdoc:
-  packagesToScan: com.br.vida.api.srv.apolice.atraso
+  packagesToScan: com.br.vida.api.srv.apolice.aniversario
 spring:
     banner:
         location: classpath:/banner.txt
@@ -22,7 +22,7 @@ spring:
         show-sql: true
       properties:
         hibernate:
-          physical_naming_strategy: com.br.vida.api.srv.apolice.atraso.commom.utils.NoChangeNamingStrategy
+          physical_naming_strategy: com.br.vida.api.srv.apolice.aniversario.commom.utils.NoChangeNamingStrategy
           dialect: org.hibernate.dialect.SQLServerDialect
           proc.param_null_passing: true
       show-sql: true

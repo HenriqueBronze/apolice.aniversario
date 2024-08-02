@@ -1,16 +1,16 @@
 springdoc:
-  packagesToScan: com.br.vida.api.srv.apolice.atraso
+  packagesToScan: com.br.vida.api.srv.apolice.aniversario
 spring:
     banner:
         location: classpath:/banner.txt
     profiles:
         active: ${PROFILE:dev}
     application:
-        name: "vida-api-srv-apolice-atraso"
+        name: "vida-api-srv-apolice-aniversario"
         version: "0.0.1-SNAPSHOT"
         description: "Demo project for Spring Boot"
-        groupId: "com.br.vida.api.srv.apolice.atraso"
-        artifactId: "vida-api-srv-apolice-atraso"
+        groupId: "com.br.vida.api.srv.apolice.aniversario"
+        artifactId: "vida-api-srv-apolice-aniversario"
         java: "11.0.23"
     ci:
         ambiente: ${AMBIENTE:esteira}
@@ -22,7 +22,7 @@ spring:
         show-sql: true
       properties:
         hibernate:
-          physical_naming_strategy: com.br.vida.api.srv.apolice.atraso.commom.utils.NoChangeNamingStrategy
+          physical_naming_strategy: com.br.vida.api.srv.apolice.aniversario.commom.utils.NoChangeNamingStrategy
           dialect: org.hibernate.dialect.SQLServerDialect
           proc.param_null_passing: true
       show-sql: true
@@ -33,7 +33,7 @@ spring:
 server:
     port: 8443
     servlet:
-        context-path: "/vida-api-srv-apolice-atraso"
+        context-path: "/vida-api-srv-apolice-aniversario"
         encoding:
             charset: "UTF-8"
 
@@ -48,7 +48,7 @@ server:
     
 logging:
     file:
-        name: "/var/log/vida-api-srv-apolice-atraso/vida-api-srv-apolice-atraso.log"
+        name: "/var/log/vida-api-srv-apolice-aniversario/vida-api-srv-apolice-aniversario.log"
     level:
         root: INFO
     pattern:

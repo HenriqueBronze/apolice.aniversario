@@ -59,35 +59,32 @@ public class ApolicesEntity {
 
 
 
-    @Column(name = "cCertApolc")
-    private short cCertApolc;
-
     @Column(name = "dRenovApolc")
-    private BigDecimal dRenovApolc;
+    private LocalDate dRenovApolc;
 
     @Column(name = "dEmisApolc")
     private LocalDate dEmisApolc;
 
     @Column(name = "dInicVgciaApolc")
-    private Long dInicVgciaApolc;
+    private LocalDate dInicVgciaApolc;
 
     @Column(name = "dFimVgciaApolc")
-    private String dFimVgciaApolc;
+    private LocalDate dFimVgciaApolc;
 
     @Column(name = "vPrmioLiq")
-    private byte vPrmioLiq;
+    private BigDecimal vPrmioLiq;
 
     @Column(name = "vIofApolcCober")
-    private short vIofApolcCober;
+    private BigDecimal vIofApolcCober;
 
     @Column(name = "vCaptlSegrd")
-    private short vCaptlSegrd;
+    private BigDecimal vCaptlSegrd;
 
     @Column(name = "vCaptlSegrdPpsto")
-    private short vCaptlSegrdPpsto;
+    private BigDecimal vCaptlSegrdPpsto;
 
-    @Column(name = "qDiaCanctApolc")
-    private short qDiaCanctApolc;
+    @Column(name = "cSitRenovApolc")
+    private byte cSitRenovApolc;
 
 
 }

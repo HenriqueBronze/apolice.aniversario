@@ -5,8 +5,8 @@
             "type": "java",
             "name": "Application",
             "request": "launch",
-            "mainClass": "com.br.vida.api.srv.apolice.atraso.Application",
-            "projectName": "vida-api-srv-apolice-atraso"
+            "mainClass": "com.br.vida.api.srv.apolice.aniversario.Application",
+            "projectName": "vida-api-srv-apolice-aniversario"
         },
         {
             "type": "java",
