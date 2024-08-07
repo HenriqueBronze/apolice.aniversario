@@ -18,73 +18,71 @@ public class ApolicesEntity {
     @Column(name = "handle")
     private Long handle;
 
-    @Column(name = "cCertApolc")
-    private Long cCertApolc;
+    @Column(name = "cdCertificadoApolice")
+    private Long cdCertificadoApolice;
 
-    @Column(name = "nPpstaSegur")
-    private Long nPpstaSegur;
+    @Column(name = "nuPropostaSeguro")
+    private Long nuPropostaSeguro;
 
-    @Column(name = "iProdtApolc")
-    private String iProdtApolc;
+    @Column(name = "nmProdutoApolice")
+    private String nmProdutoApolice;
 
-    @Column(name = "iSegrdApolc")
-    private String iSegrdApolc;
+    @Column(name = "nmSeguradoApolice")
+    private String nmSeguradoApolice;
 
-    @Column(name = "cCpfCnpj")
-    private String cCpfCnpj;
+    @Column(name = "cdCpfCnpj")
+    private String cdCpfCnpj;
 
-    @Column(name = "cCtrlCpfCnpj")
-    private String cCtrlCpfCnpj;
+    @Column(name = "cdControleCpfCnpj")
+    private String cdControleCpfCnpj;
 
-    @Column(name = "rFoneSegrd")
-    private String rFoneSegrd;
+    @Column(name = "dsTelefoneSegurado")
+    private String dsTelefoneSegurado;
 
-    @Column(name = "eEmailSegrd")
-    private String eEmailSegrd;
+    @Column(name = "enEmailSegurado")
+    private String enEmailSegurado;
 
-    @Column(name = "cSucurApolc")
-    private Integer cSucurApolc;
+    @Column(name = "cdSucursalApolice")
+    private Integer cdSucursalApolice;
 
-    @Column(name = "cAgBcria")
-    private Integer cAgBcria;
+    @Column(name = "cdAgenciaBancariaSegurado")
+    private Integer cdAgenciaBancariaSegurado;
 
-    @Column(name = "cCrrtrSegurVida")
-    private Integer cCrrtrSegurVida;
+    @Column(name = "cdCorretorSeguroVida")
+    private Integer cdCorretorSeguroVida;
 
-    @Column(name = "cFormaPgtoFat")
-    private Integer cFormaPgtoFat;
+    @Column(name = "cdFormaPagamentoFatura")
+    private Integer cdFormaPagamentoFatura;
 
-    @Column(name = "cPerdcPgtoFat")
-    private Integer cPerdcPgtoFat;
+    @Column(name = "cdPeriodicidadePagamentoFatura")
+    private Integer cdPeriodicidadePagamentoFatura;
 
+    @Column(name = "dtRenovacaoApolice")
+    private LocalDate dtRenovacaoApolice;
 
+    @Column(name = "dtEmissaoApolice")
+    private LocalDate dtEmissaoApolice;
 
-    @Column(name = "dRenovApolc")
-    private LocalDate dRenovApolc;
+    @Column(name = "dtInicioVigenciaApolice")
+    private LocalDate dtInicioVigenciaApolice;
 
-    @Column(name = "dEmisApolc")
-    private LocalDate dEmisApolc;
+    @Column(name = "dtFimVigenciaApolice")
+    private LocalDate dtFimVigenciaApolice;
 
-    @Column(name = "dInicVgciaApolc")
-    private LocalDate dInicVgciaApolc;
+    @Column(name = "vrPremioLiquido")
+    private BigDecimal vrPremioLiquido;
 
-    @Column(name = "dFimVgciaApolc")
-    private LocalDate dFimVgciaApolc;
+    @Column(name = "vrIofApoliceCobertura")
+    private BigDecimal vrIofApoliceCobertura;
 
-    @Column(name = "vPrmioLiq")
-    private BigDecimal vPrmioLiq;
+    @Column(name = "vrCapitalSegurado")
+    private BigDecimal vrCapitalSegurado;
 
-    @Column(name = "vIofApolcCober")
-    private BigDecimal vIofApolcCober;
+    @Column(name = "vrCapitalSeguradoProposto")
+    private BigDecimal vrCapitalSeguradoProposto;
 
-    @Column(name = "vCaptlSegrd")
-    private BigDecimal vCaptlSegrd;
-
-    @Column(name = "vCaptlSegrdPpsto")
-    private BigDecimal vCaptlSegrdPpsto;
-
-    @Column(name = "cSitRenovApolc")
-    private byte cSitRenovApolc;
+    @Column(name = "cdSituacaoRenovacaoApolice")
+    private Byte cdSituacaoRenovacaoApolice;
 
 
 }
