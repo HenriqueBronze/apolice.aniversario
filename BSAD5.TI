@@ -1,1 +1,4 @@
-
+SPRING_PROFILES_ACTIVE=ti
+SPRING_DATASOURCE_URL=jdbc:sqlserver://10.55.243.58:1433;databaseName=SISED000;encrypt=false;trustServerCertificate=false;characterSet=UTF-8
+SPRING_DATASOURCE_USERNAME=SISEJAVA
+SPRING_DATASOURCE_PASSWORD=java
