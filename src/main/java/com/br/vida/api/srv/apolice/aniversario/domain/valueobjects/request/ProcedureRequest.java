@@ -4,6 +4,8 @@ import lombok.Data;
 
 @Data
 public class ProcedureRequest {
+    private String codCorretor;
+
     private String sortColumn;
 
     private String sortDirection;

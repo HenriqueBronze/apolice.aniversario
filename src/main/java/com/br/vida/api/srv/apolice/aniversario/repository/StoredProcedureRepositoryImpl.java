@@ -16,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.ParameterMode;
 import javax.persistence.PersistenceException;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +48,12 @@ public class StoredProcedureRepositoryImpl implements StoredProcedureRepository<
     
                 if (cachedResult == null) {
                     // Se os dados não estiverem no cache, executa a stored procedure e armazena no cache
-                    List<ApolicesEntity> allResults = entityManager.createStoredProcedureQuery("temp_consulta_carga_cards_renov", entityClass).getResultList();
+                    List<ApolicesEntity> allResults = entityManager.
+                            createStoredProcedureQuery("temp_consulta_carga_cards_renov", entityClass)
+                            .registerStoredProcedureParameter("@cd_usuario", String.class, ParameterMode.IN)
+                            .setParameter("@cd_usuario", procedureRequest.getCodCorretor())
+                            .getResultList();
+
                     cachedResult = new CachedResult<>(allResults, null, null, pageable.getPageNumber(), pageable.getPageSize());
                     cache.put(cacheKey, cachedResult);
                 }
